@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { css } from 'styled-components';
-3;
+
 export const Container = styled.a`
    ${({ theme }) => css`
    display: block;
