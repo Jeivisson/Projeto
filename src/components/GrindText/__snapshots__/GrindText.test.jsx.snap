@@ -142,3 +142,289 @@ exports[`<GrindSection> should render 1`] = `
   </div>
 </div>
 `;
+
+exports[`<GrindSection> should render with background 1`] = `
+.c4 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+}
+
+.c9 {
+  color: #0A1128;
+  font-size: 2.4rem;
+  text-transform: none;
+}
+
+.c6 {
+  font-size: 2.4rem;
+}
+
+.c2 .c5 {
+  margin-bottom: 6.4rem;
+}
+
+.c7 {
+  counter-reset: grid-counter;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 3.2rem;
+}
+
+.c8 .c3 {
+  position: relative;
+  left: 5rem;
+}
+
+.c8 .c3::before {
+  counter-increment: grid-counter;
+  content: counter(grid-counter);
+  position: absolute;
+  font-size: 8rem;
+  top: -4rem;
+  left: -6rem;
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+.c0 {
+  background: #FFFFFF;
+  color: #0A1128;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+}
+
+@media (max-width:768px) {
+  .c4 {
+    font-size: 4.0rem;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h1
+          class="c3 c4"
+        >
+          My Grind
+        </h1>
+        <p
+          class="c5 c6"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam recusandae a est ratione magnam quod placeat magni, nobis, et accusamus iusto. Laborum incidunt omnis reiciendis molestiae quo quia nihil deleniti!
+        </p>
+        <div
+          class="c7"
+        >
+          <div
+            class="c8"
+          >
+            <h1
+              class="c3 c9"
+            >
+              Teste 1
+            </h1>
+            <p
+              class="c5 c6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam recusandae a est ratione magnam quod placeat magni, nobis, et accusamus iusto. Laborum incidunt omnis reiciendis molestiae quo quia nihil deleniti!
+            </p>
+          </div>
+          <div
+            class="c8"
+          >
+            <h1
+              class="c3 c9"
+            >
+              Teste 2
+            </h1>
+            <p
+              class="c5 c6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam recusandae a est ratione magnam quod placeat magni, nobis, et accusamus iusto. Laborum incidunt omnis reiciendis molestiae quo quia nihil deleniti!
+            </p>
+          </div>
+          <div
+            class="c8"
+          >
+            <h1
+              class="c3 c9"
+            >
+              Teste 3
+            </h1>
+            <p
+              class="c5 c6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam recusandae a est ratione magnam quod placeat magni, nobis, et accusamus iusto. Laborum incidunt omnis reiciendis molestiae quo quia nihil deleniti!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<GrindSection> should render without background 1`] = `
+.c4 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+}
+
+.c9 {
+  color: #0A1128;
+  font-size: 2.4rem;
+  text-transform: none;
+}
+
+.c6 {
+  font-size: 2.4rem;
+}
+
+.c2 .c5 {
+  margin-bottom: 6.4rem;
+}
+
+.c7 {
+  counter-reset: grid-counter;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 3.2rem;
+}
+
+.c8 .c3 {
+  position: relative;
+  left: 5rem;
+}
+
+.c8 .c3::before {
+  counter-increment: grid-counter;
+  content: counter(grid-counter);
+  position: absolute;
+  font-size: 8rem;
+  top: -4rem;
+  left: -6rem;
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+.c0 {
+  background: #FFFFFF;
+  color: #0A1128;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+}
+
+@media (max-width:768px) {
+  .c4 {
+    font-size: 4.0rem;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h1
+          class="c3 c4"
+        >
+          My Grind
+        </h1>
+        <p
+          class="c5 c6"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam recusandae a est ratione magnam quod placeat magni, nobis, et accusamus iusto. Laborum incidunt omnis reiciendis molestiae quo quia nihil deleniti!
+        </p>
+        <div
+          class="c7"
+        >
+          <div
+            class="c8"
+          >
+            <h1
+              class="c3 c9"
+            >
+              Teste 1
+            </h1>
+            <p
+              class="c5 c6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam recusandae a est ratione magnam quod placeat magni, nobis, et accusamus iusto. Laborum incidunt omnis reiciendis molestiae quo quia nihil deleniti!
+            </p>
+          </div>
+          <div
+            class="c8"
+          >
+            <h1
+              class="c3 c9"
+            >
+              Teste 2
+            </h1>
+            <p
+              class="c5 c6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam recusandae a est ratione magnam quod placeat magni, nobis, et accusamus iusto. Laborum incidunt omnis reiciendis molestiae quo quia nihil deleniti!
+            </p>
+          </div>
+          <div
+            class="c8"
+          >
+            <h1
+              class="c3 c9"
+            >
+              Teste 3
+            </h1>
+            <p
+              class="c5 c6"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam recusandae a est ratione magnam quod placeat magni, nobis, et accusamus iusto. Laborum incidunt omnis reiciendis molestiae quo quia nihil deleniti!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
