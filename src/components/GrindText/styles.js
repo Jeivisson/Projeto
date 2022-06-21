@@ -19,7 +19,7 @@ export const Grid = styled.div`
    `}
 `;
 export const GridElement = styled.div`
-   ${({ theme }) => css`
+   ${() => css`
 
    ${HeadingContainer} {
     position: relative;
