@@ -1,15 +1,15 @@
-import { GrindText } from '.';
+import { GridText } from '.';
 import { renderTheme } from '../../styles/render-theme';
 import mock from './mock';
 
-describe('<GrindText>', () => {
+describe('<GridText>', () => {
   it('should render with background', () => {
-    const { container } = renderTheme(<GrindText {...mock} />);
+    const { container } = renderTheme(<GridText {...mock} />);
     expect(container).toMatchSnapshot();
   });
   it('should render without background', () => {
     const { container } = renderTheme(
-      <GrindText {...mock} background={undefined} />,
+      <GridText {...mock} background={undefined} />,
     );
     expect(container).toMatchSnapshot();
   });

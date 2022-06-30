@@ -1,10 +1,10 @@
-import { Gotop } from '.';
+import { GoTop } from '.';
 
 export default {
-  title: 'Gotop',
-  component: Gotop,
+  title: 'GoTop',
+  component: GoTop,
   args: {
-    children: 'Gotop',
+    children: 'GoTop',
   },
   argTypes: {
     children: { type: 'string' },
@@ -56,7 +56,7 @@ export const Template = (args) => {
         et nam rem assumenda suscipit, unde nihil praesentium quibusdam veniam
         nesciunt reprehenderit nulla nemo ex tenetur. Ipsam, cumque nostrum.
       </p>
-      <Gotop {...args} />
+      <GoTop {...args} />
     </div>
   );
 };

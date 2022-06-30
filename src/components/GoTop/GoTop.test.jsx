@@ -1,10 +1,10 @@
 import { screen } from '@testing-library/react';
-import { Gotop } from '.';
+import { GoTop } from '.';
 import { renderTheme } from '../../styles/render-theme';
 
-describe('<Gotop>', () => {
+describe('<GoTop>', () => {
   it('should render a go to top button', () => {
-    const { container } = renderTheme(<Gotop />);
+    const { container } = renderTheme(<GoTop />);
     expect(screen.getByRole('link', { name: 'Go to top' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Go to top' })).toHaveAttribute(
       'href',

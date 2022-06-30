@@ -4,7 +4,7 @@ import { Heading } from '../Heading';
 import { TextComponent } from '../TextComponent';
 import { SectionBackground } from '../SectionBackground';
 
-export const GrindText = ({ title, description, grid, background = false }) => {
+export const GridText = ({ title, description, grid, background = false }) => {
   return (
     <SectionBackground background={background}>
       <Styled.Container>
@@ -27,7 +27,7 @@ export const GrindText = ({ title, description, grid, background = false }) => {
   );
 };
 
-GrindText.propTypes = {
+GridText.propTypes = {
   title: P.string.isRequired,
   background: P.bool,
   description: P.string.isRequired,

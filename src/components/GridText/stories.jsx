@@ -1,15 +1,15 @@
-import { GrindText } from '.';
+import { GridText } from '.';
 import mock from './mock';
 export default {
-  title: 'GrindText',
-  component: GrindText,
+  title: 'GridText',
+  component: GridText,
   args: mock,
 };
 
 export const Template = (args) => {
   return (
     <div>
-      <GrindText {...args} />
+      <GridText {...args} />
     </div>
   );
 };
