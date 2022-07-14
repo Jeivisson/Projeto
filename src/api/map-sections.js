@@ -7,7 +7,14 @@ export const mapSections = (sections = []) => {
       return mapSectionContent(section);
     }
     if (section.__component === 'section.section-grid') {
-      return mapSectionGrid(section);
+      const { text_grid = [], image_grid = [] } = section;
+
+      if (text_grid.length > 0) {
+        return mapTextGrid(section);
+      }
+      if (image_grid.length > 0) {
+        return mapImageGrid(section);
+      }
     }
     return section;
   });
@@ -17,9 +24,11 @@ export const mapSectionTwoColumns = (section = {}) => {
     __component: component = '',
     title = '',
     description: text = '',
-    image: { data: { attributes: { url: srcImg = '' } = '' } = '' } = '',
+    // image: { data: { attributes: { url: srcImg = '' } = '' } = '' } = '',
     metadata: { background = false, section_id: sectionId = '' } = false,
   } = section;
+
+  const srcImg = section?.image?.data?.attributes?.url || '';
 
   return {
     component,
@@ -46,6 +55,62 @@ export const mapSectionContent = (section = {}) => {
     sectionId,
   };
 };
-export const mapSectionGrid = (section) => {
-  return section;
+export const mapTextGrid = (section = {}) => {
+  const {
+    // __component: component = '',
+    title = '',
+    description = '',
+    metadata: { background = false, section_id: sectionId = '' } = false,
+    text_grid: grid = [],
+  } = section;
+
+  return {
+    component: 'section.section-grid-text',
+    title,
+    description,
+    background,
+    sectionId,
+    grid: grid.map((text) => {
+      const { title = '', description = '' } = text;
+      return {
+        title,
+        description,
+      };
+    }),
+  };
+};
+export const mapImageGrid = (section = {}) => {
+  const {
+    // __component: component = '',
+    title = '',
+    description: description = '',
+    metadata: { background = false, section_id: sectionId = '' } = false,
+    image_grid: grid = [],
+  } = section;
+
+  return {
+    component: 'section.section-grid-image',
+    title,
+    description,
+    background,
+    sectionId,
+    grid: grid.map((img) => {
+      // const {
+      //   // image: {
+      //   //   data: {
+      //   //     attributes: {
+      //   //       url: srcImg = '',
+      //   //       alternativeText: altText = '',
+      //   //     } = '',
+      //   //   } = '',
+      //   // } = '',
+      // } = img;
+      const srcImg = img?.image?.data?.attributes?.url || '';
+      const altText = img?.image?.data?.attributes?.alternativeText || '';
+      return {
+        srcImg,
+        altText,
+      };
+    }),
+  };
 };

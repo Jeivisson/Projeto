@@ -6,7 +6,7 @@
         "title": "Teste",
         "slug": "teste",
         "createdAt": "2022-05-26T22:34:28.719Z",
-        "updatedAt": "2022-05-30T14:59:55.449Z",
+        "updatedAt": "2022-07-14T19:18:37.584Z",
         "publishedAt": "2022-05-26T22:35:08.597Z",
         "footer_text": "Feito com ♥ por ---",
         "sections": [
@@ -25,7 +25,7 @@
               "data": {
                 "id": 7,
                 "attributes": {
-                  "name": "",
+                  "name": "javascript.svg",
                   "alternativeText": "javascript.svg",
                   "caption": "javascript.svg",
                   "width": null,
@@ -89,7 +89,35 @@
               }
             ],
             "image_grid": [
-
+              {
+                "id": 2,
+                "image": {
+                  "data": {
+                    "id": 8,
+                    "attributes": {
+                      "name": "landing_page_2_c6baa21725.svg",
+                      "alternativeText": "landing_page_2_c6baa21725.svg",
+                      "caption": "landing_page_2_c6baa21725.svg",
+                      "width": null,
+                      "height": null,
+                      "formats": null,
+                      "hash": "landing_page_2_c6baa21725_09db7ed84a",
+                      "ext": ".svg",
+                      "mime": "image/svg+xml",
+                      "size": 2.51,
+                      "url": "https://res.cloudinary.com/dwxjzgpuw/image/upload/v1653922704/landing_page_2_c6baa21725_09db7ed84a.svg",
+                      "previewUrl": null,
+                      "provider": "cloudinary",
+                      "provider_metadata": {
+                        "public_id": "landing_page_2_c6baa21725_09db7ed84a",
+                        "resource_type": "image"
+                      },
+                      "createdAt": "2022-05-30T14:58:25.084Z",
+                      "updatedAt": "2022-05-30T14:58:25.084Z"
+                    }
+                  }
+                }
+              }
             ]
           }
         ],
