@@ -66,34 +66,17 @@ describe('map-sections', () => {
       title: 'titulo',
       description: 'texto',
       metadata: {
-        id: 1,
         name: 'home',
         section_id: 'home',
         background: true,
       },
       image: {
         data: {
-          id: 7,
           attributes: {
             name: 'javascript.svg',
             alternativeText: 'javascript.svg',
-            caption: 'javascript.svg',
-            width: null,
-            height: null,
-            formats: null,
             hash: 'javascript_55b530d9ce',
-            ext: '.svg',
-            mime: 'image/svg+xml',
-            size: 30.31,
             url: '1.svg',
-            previewUrl: null,
-            provider: 'cloudinary',
-            provider_metadata: {
-              public_id: 'javascript_55b530d9ce',
-              resource_type: 'image',
-            },
-            createdAt: '2022-05-26T22:32:01.347Z',
-            updatedAt: '2022-05-26T22:32:01.347Z',
           },
         },
       },
@@ -117,12 +100,10 @@ describe('map-sections', () => {
 
   it('should map section content', () => {
     const data = mapSectionContent({
-      id: 1,
       __component: 'section.section-content',
       title: 'title',
       content: 'html',
       metadata: {
-        id: 2,
         name: 'intro',
         section_id: 'intro',
         background: false,
@@ -136,12 +117,10 @@ describe('map-sections', () => {
   });
   it('should map section grid text with data values ', () => {
     const data = mapTextGrid({
-      id: 1,
       __component: 'section.section-grid',
       title: 'My grid',
       description: 'Uma breve descrição',
       metadata: {
-        id: 3,
         name: 'grid-one',
         section_id: 'grid-one',
         background: true,
@@ -151,18 +130,6 @@ describe('map-sections', () => {
           id: 1,
           title: 'Teste 1',
           description: 'description teste 1',
-        },
-        {
-          id: 2,
-          title: 'Teste 2',
-          description:
-            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.\n\n',
-        },
-        {
-          id: 3,
-          title: 'Teste 2',
-          description:
-            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.\n\n',
         },
       ],
     });
@@ -192,42 +159,22 @@ describe('map-sections', () => {
   });
   it('should map section grid image with data values ', () => {
     const data = mapImageGrid({
-      id: 1,
       __component: 'section.section-grid',
       title: 'My grid',
       description: 'Uma breve descrição',
       metadata: {
-        id: 3,
         name: 'grid-one',
         section_id: 'grid-one',
         background: true,
       },
       image_grid: [
         {
-          id: 2,
           image: {
             data: {
-              id: 8,
               attributes: {
                 name: 'landing_page_2_c6baa21725.svg',
                 alternativeText: 'alt.svg',
-                caption: 'landing_page_2_c6baa21725.svg',
-                width: null,
-                height: null,
-                formats: null,
-                hash: 'landing_page_2_c6baa21725_09db7ed84a',
-                ext: '.svg',
-                mime: 'image/svg+xml',
-                size: 2.51,
                 url: 'a.svg',
-                previewUrl: null,
-                provider: 'cloudinary',
-                provider_metadata: {
-                  public_id: 'landing_page_2_c6baa21725_09db7ed84a',
-                  resource_type: 'image',
-                },
-                createdAt: '2022-05-30T14:58:25.084Z',
-                updatedAt: '2022-05-30T14:58:25.084Z',
               },
             },
           },

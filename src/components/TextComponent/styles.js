@@ -3,5 +3,6 @@ import { css } from 'styled-components';
 export const Container = styled.div`
    ${({ theme }) => css`
    font-size: ${theme.fonts.sizes.medium};
+   margin: 3.2rem;
    `}
 `;
