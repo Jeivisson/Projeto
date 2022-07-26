@@ -12,6 +12,7 @@ import { GridContent } from '../../components/GridContent';
 import { GridText } from '../../components/GridText';
 import { GridImage } from '../../components/GridImage';
 import { useLocation } from 'react-router-dom';
+
 import config from '../../config';
 
 function Home() {
@@ -21,21 +22,19 @@ function Home() {
 
   useEffect(() => {
     const pathName = location.pathname.replace(/[^a-z0-9-_]/gi, '');
-    const slug = pathName ? pathName : config.defaultSlug;
+    const slug = pathName ? pathName : 'landing-page';
 
     const load = async () => {
       try {
         // console.log('fetching');
 
         const data = await fetch(
-          'http://localhost:1337/api/pages?populate=deep&pagination[pageSize]=1&sort[0]=id:desc',
+          `http://localhost:1337/api/pages/?filters[slug]=${slug}&populate=deep`,
         );
         const json = await data.json();
         const { attributes } = json.data[0];
         const pageData = mapData([attributes]);
-        await new Promise((r) => {
-          setData(() => pageData[0]);
-        });
+        setData(() => pageData[0]);
       } catch (e) {
         setData(undefined);
       }
@@ -59,7 +58,7 @@ function Home() {
       document.title = `Carregando...  | ${config.siteName}`;
     }
 
-    if (data && !data.slug) {
+    if (data && data.slug) {
       document.title = `${data.title}  | ${config.siteName}`;
     }
   }),
