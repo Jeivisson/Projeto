@@ -29,7 +29,7 @@ function Home() {
         // console.log('fetching');
 
         const data = await fetch(
-          `http://localhost:1337/api/pages/?filters[slug]=${slug}&populate=deep`,
+          `https://jeii-strapi-test.herokuapp.com/api/pages/?filters[slug]=${slug}&populate=deep`,
         );
         const json = await data.json();
         const { attributes } = json.data[0];
