@@ -10,27 +10,30 @@ describe('map-menu', () => {
   });
   it('should map menu to match keys and values required', () => {
     const menu = mapMenu({
-      open_in_new_tab: false,
-      logo_text: 'Landing Page',
       logo_link: '#home',
+      logo_text: 'Logo',
+      logo: {
+        data: {
+          attributes: {
+            url: 'a.svg',
+          },
+        },
+      },
       menu_links: [
         {
-          open_in_new_tab: false,
           link_text: 'intro',
           url: '#intro',
+          open_in_new_tab: false,
         },
         {
-          open_in_new_tab: false,
           link_text: 'grind-one',
-          url: '#grind-one',
+          url: '#grid-one',
+          open_in_new_tab: false,
         },
       ],
-      logo: {
-        url: 'a.svg',
-      },
     });
     expect(menu.newTab).toBe(false);
-    expect(menu.text).toBe('Landing Page');
+    expect(menu.text).toBe('Logo');
     expect(menu.srcImg).toBe('a.svg');
     expect(menu.link).toBe('#home');
     expect(menu.links[0].newTab).toBe(false);

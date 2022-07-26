@@ -2,27 +2,31 @@ import { useEffect, useRef, useState } from 'react';
 
 import * as Styles from './styles';
 
-import { mockBase } from '../Base/mock';
 import { mapData } from '../../api/map-data';
-
-import { Heading } from '../../components/Heading';
 
 import { Base } from '../Base';
 import { PageNotFound } from '../PageNotFound/Index';
 import { Loading } from '../Loading';
-import { GridTwoColumn } from '../../components/GridTwoColumn';
+import { GridTwoColumns } from '../../components/GridTwoColumns';
 import { GridContent } from '../../components/GridContent';
 import { GridText } from '../../components/GridText';
 import { GridImage } from '../../components/GridImage';
+import { useLocation } from 'react-router-dom';
+import config from '../../config';
 
 function Home() {
   const [data, setData] = useState([]);
   const isMounted = useRef(true);
+  const location = useLocation();
 
   useEffect(() => {
+    const pathName = location.pathname.replace(/[^a-z0-9-_]/gi, '');
+    const slug = pathName ? pathName : config.defaultSlug;
+
     const load = async () => {
       try {
-        console.log('fetching');
+        // console.log('fetching');
+
         const data = await fetch(
           'http://localhost:1337/api/pages?populate=deep&pagination[pageSize]=1&sort[0]=id:desc',
         );
@@ -44,7 +48,22 @@ function Home() {
     return () => {
       isMounted.current = false;
     };
-  }, []);
+  }, [location]);
+
+  useEffect(() => {
+    if (data === undefined) {
+      document.title = `Página não encontrada | ${config.siteName}`;
+    }
+
+    if (data && !data.slug) {
+      document.title = `Carregando...  | ${config.siteName}`;
+    }
+
+    if (data && !data.slug) {
+      document.title = `${data.title}  | ${config.siteName}`;
+    }
+  }),
+    [data];
 
   if (data === undefined) {
     return <PageNotFound />;
@@ -68,7 +87,7 @@ function Home() {
         const key = `${slug}-${index}`;
 
         if (component === 'section.section-two-columns') {
-          return <GridTwoColumn key={key} {...section} />;
+          return <GridTwoColumns key={key} {...section} />;
         }
         if (component === 'section.section-content') {
           return <GridContent key={key} {...section} />;
